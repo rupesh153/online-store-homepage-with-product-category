@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6f9;
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.header input {
+    margin-top: 10px;
+    padding: 10px;
+    width: 280px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+}
+/* CART */
+.cart-box {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: #048ebc;
+    padding: 8px 12px;
+    border-radius: 20px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* BUTTON */
+.add-cart {
+    margin-top: 10px;
+    padding: 8px;
+    background: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-cart:hover {
+    background: #219150;
+}
+/* CATEGORY */
+.category-menu {
+    margin-top: 15px;
+}
+
+.category-menu button {
+    margin: 5px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    background: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.category-menu button:hover {
+    background: #1abc9c;
+}
+
+/* FILTERS */
+.filters {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    background: white;
+    flex-wrap: wrap;
+}
+
+.filters select, .filters input {
+    padding: 8px;
+    border-radius: 5px;
+}
+
