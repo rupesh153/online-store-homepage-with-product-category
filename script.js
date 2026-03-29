@@ -16,9 +16,21 @@ function displayProducts(products) {
     const container = document.getElementById("productContainer");
     container.innerHTML = "";
 
+    const gradients = [
+        "linear-gradient(135deg, #f07b6e, #1fb9c4)",
+        "linear-gradient(135deg, #a18cd1, #fbc2eb)",
+        "linear-gradient(135deg, #65e5f6, #fd85ed)",
+        "linear-gradient(135deg, #84fab0, #8fd3f4)",
+        "linear-gradient(135deg, #5bc920, #28fbf1)"
+    ];
+
     products.forEach(p => {
+
+        // ✅ IMPORTANT: generate gradient INSIDE loop
+        const randomGradient = gradients[Math.floor(Math.random() * gradients.length)];
+
         const card = `
-        <div class="card">
+        <div class="card" style="background:${randomGradient}">
             <img src="${p.image}">
             <h3>${p.title}</h3>
             <p class="price">₹${(p.price * 80).toFixed(0)}</p>
@@ -26,6 +38,7 @@ function displayProducts(products) {
             <button class="add-cart" onclick="addToCart()">Add to Cart</button>
         </div>
         `;
+
         container.innerHTML += card;
     });
 }
