@@ -15,9 +15,9 @@
     <!-- SEARCH -->
     <input type="text" id="search" placeholder="🔍 Search products...">
 <!-- CART ICON -->
-    <div class="cart-box">
-        🛒 <span id="cartCount">0</span>
-    </div>
+ <div class="cart-box" onclick="goToCart()">
+    🛒 <span id="cartCount">0</span>
+</div>
     <!-- CATEGORY -->
     <nav class="category-menu">
         <button onclick="filterCategory('all')">All</button>
@@ -27,36 +27,7 @@
        <button onclick="filterCategory(`women's clothing`)">Women</button>
     </nav>
 </header>
-<!-- <section class="slider">
-    <div class="slides" id="slides">
-
-        <div class="slide">
-            <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9">
-            <div class="caption">
-                <h2>🔥 Electronics Sale</h2>
-                <p>Latest Gadgets at Best Prices</p>
-            </div>
-        </div>
-
-
-        <div class="slide">
-            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d">
-            <div class="caption">
-                <h2>👗 Women's Fashion</h2>
-                <p>New Arrivals Just Landed</p>
-            </div>
-        </div>
-         <div class="slide">
-            <img src="https://images.unsplash.com/photo-1603561596112-0a132b757442">
-            <div class="caption">
-                <h2>💎 Premium Jewellery</h2>
-                <p>Elegant Designs for Every Occasion</p>
-            </div>
-        </div>
-
-        
-    </div>
-</section> -->
+<!-- slider-->
 <!-- FILTER SECTION -->
 <section class="filters">
 
@@ -84,7 +55,27 @@
 
 <!-- PRODUCTS -->
 <main id="productContainer" class="product-grid"></main>
+<!-- CART POPUP -->
+<div id="cartPopup" class="popup">
+    <div class="popup-content">
+        <span class="close-btn" onclick="closePopup()">❌</span>
 
+        <img id="popupImg">
+        <h2 id="popupTitle"></h2>
+        <p id="popupPrice"></p>
+
+        <!-- Quantity -->
+        <div class="qty-box">
+            <button onclick="changeQty(-1)">➖</button>
+            <span id="qty">1</span>
+            <button onclick="changeQty(1)">➕</button>
+        </div>
+
+        <button class="confirm-btn" onclick="confirmAddToCart()">
+            Add to Cart ✅
+        </button>
+    </div>
+</div>
 <script src="script.js"></script>
 </body>
 </html>
