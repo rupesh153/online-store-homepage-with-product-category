@@ -1,0 +1,162 @@
+[
+  {
+    "id": 1,
+    "title": "Fjallraven Backpack",
+    "price": 8796,
+    "rating": 3.9,
+    "category": "men's clothing",
+    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png"
+  },
+  {
+    "id": 2,
+    "title": "Mens Casual T-Shirt",
+    "price": 1784,
+    "rating": 4.1,
+    "category": "men's clothing",
+    "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_t.png"
+  },
+  {
+    "id": 3,
+    "title": "Mens Cotton Jacket",
+    "price": 4479,
+    "rating": 4.7,
+    "category": "men's clothing",
+    "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_t.png"
+  },
+  {
+    "id": 4,
+    "title": "Mens Casual Slim Fit",
+    "price": 1279,
+    "rating": 2.1,
+    "category": "men's clothing",
+    "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_t.png"
+  },
+  {
+    "id": 5,
+    "title": "Gold Bracelet",
+    "price": 55600,
+    "rating": 4.6,
+    "category": "jewelery",
+    "image": "https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_t.png"
+  },
+  {
+    "id": 6,
+    "title": "Gold Ring",
+    "price": 13440,
+    "rating": 3.9,
+    "category": "jewelery",
+    "image": "https://fakestoreapi.com/img/61sbMiUnoGL._AC_UL640_QL65_ML3_t.png"
+  },
+  {
+    "id": 7,
+    "title": "Princess Ring",
+    "price": 799,
+    "rating": 3.0,
+    "category": "jewelery",
+    "image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_t.png"
+  },
+  {
+    "id": 8,
+    "title": "Steel Earrings",
+    "price": 879,
+    "rating": 1.9,
+    "category": "jewelery",
+    "image": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_t.png"
+  },
+  {
+    "id": 9,
+    "title": "WD 2TB Hard Drive",
+    "price": 5120,
+    "rating": 3.3,
+    "category": "electronics",
+    "image": "https://fakestoreapi.com/img/61IBBVJvSDL._AC_SY879_t.png"
+  },
+  {
+    "id": 10,
+    "title": "SanDisk 1TB SSD",
+    "price": 8720,
+    "rating": 2.9,
+    "category": "electronics",
+    "image": "https://fakestoreapi.com/img/61U7T1koQqL._AC_SX679_t.png"
+  },
+  {
+    "id": 11,
+    "title": "Silicon Power SSD",
+    "price": 8720,
+    "rating": 4.8,
+    "category": "electronics",
+    "image": "https://fakestoreapi.com/img/71kWymZ+c+L._AC_SX679_t.png"
+  },
+  {
+    "id": 12,
+    "title": "WD Gaming Drive",
+    "price": 9120,
+    "rating": 4.8,
+    "category": "electronics",
+    "image": "https://fakestoreapi.com/img/61mtL65D4cL._AC_SX679_t.png"
+  },
+  {
+    "id": 13,
+    "title": "Acer Monitor",
+    "price": 47920,
+    "rating": 2.9,
+    "category": "electronics",
+    "image": "https://fakestoreapi.com/img/81QpkIctqPL._AC_SX679_t.png"
+  },
+  {
+    "id": 14,
+    "title": "Samsung Curved Monitor",
+    "price": 79999,
+    "rating": 2.2,
+    "category": "electronics",
+    "image": "https://fakestoreapi.com/img/81Zt42ioCgL._AC_SX679_t.png"
+  },
+  {
+    "id": 15,
+    "title": "Snowboard Jacket",
+    "price": 4559,
+    "rating": 2.6,
+    "category": "women's clothing",
+    "image": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_t.png"
+  },
+  {
+    "id": 16,
+    "title": "Leather Jacket",
+    "price": 2396,
+    "rating": 2.9,
+    "category": "women's clothing",
+    "image": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_t.png"
+  },
+  {
+    "id": 17,
+    "title": "Rain Jacket",
+    "price": 3199,
+    "rating": 3.8,
+    "category": "women's clothing",
+    "image": "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2t.png"
+  },
+  {
+    "id": 18,
+    "title": "Boat Neck Top",
+    "price": 788,
+    "rating": 4.7,
+    "category": "women's clothing",
+    "image": "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_t.png"
+  },
+  {
+    "id": 19,
+    "title": "Moisture T-Shirt",
+    "price": 636,
+    "rating": 4.5,
+    "category": "women's clothing",
+    "image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_t.png"
+  },
+  {
+    "id": 20,
+    "title": "Casual Cotton T-Shirt",
+    "price": 1039,
+    "rating": 3.6,
+    "category": "women's clothing",
+    "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_t.png"
+  }
+]

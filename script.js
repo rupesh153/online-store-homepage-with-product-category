@@ -2,13 +2,19 @@ let allProducts = [];
 let filteredProducts = [];
 let cartCount = 0;
 
-// FETCH PRODUCTS
-fetch('https://fakestoreapi.com/products')
+// FETCH PRODUCTS (FROM LOCAL JSON)
+fetch('products.json')
     .then(res => res.json())
     .then(data => {
-        allProducts = data;
-        filteredProducts = data;
-        displayProducts(data);
+        // Convert rating number → object (so your existing code works)
+        allProducts = data.map(p => ({
+            ...p,
+            rating: { rate: p.rating }
+        }));
+
+        filteredProducts = allProducts;
+        displayProducts(filteredProducts);
+        updateCartCount();
     });
 
 // DISPLAY PRODUCTS
@@ -26,18 +32,17 @@ function displayProducts(products) {
 
     products.forEach(p => {
 
-        // ✅ IMPORTANT: generate gradient INSIDE loop
         const randomGradient = gradients[Math.floor(Math.random() * gradients.length)];
 
         const card = `
         <div class="card" style="background:${randomGradient}">
             <img src="${p.image}">
             <h3>${p.title}</h3>
-            <p class="price">₹${(p.price * 80).toFixed(0)}</p>
+            <p class="price">₹${p.price}</p>
             <p class="rating">⭐ ${p.rating.rate}</p>
-   <button class="add-cart" onclick="openCartPopup(${p.id})">
-    Add to Cart
-</button>
+            <button class="add-cart" onclick="openCartPopup(${p.id})">
+                Add to Cart
+            </button>
         </div>
         `;
 
@@ -55,7 +60,7 @@ function openCartPopup(id) {
 
     document.getElementById("popupImg").src = selectedProduct.image;
     document.getElementById("popupTitle").innerText = selectedProduct.title;
-    document.getElementById("popupPrice").innerText = "₹" + (selectedProduct.price * 80).toFixed(0);
+    document.getElementById("popupPrice").innerText = "₹" + selectedProduct.price;
     document.getElementById("qty").innerText = quantity;
 
     document.getElementById("cartPopup").style.display = "flex";
@@ -73,13 +78,7 @@ function changeQty(val) {
     document.getElementById("qty").innerText = quantity;
 }
 
-// CONFIRM ADD
-function confirmAddToCart() {
-    cartCount += quantity;
-    document.getElementById("cartCount").innerText = cartCount;
-
-    closePopup();
-}
+// CONFIRM ADD (ONLY ONE FUNCTION)
 function confirmAddToCart() {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
@@ -91,7 +90,7 @@ function confirmAddToCart() {
         cart.push({
             id: selectedProduct.id,
             title: selectedProduct.title,
-            price: selectedProduct.price * 80,
+            price: selectedProduct.price,
             image: selectedProduct.image,
             qty: quantity
         });
@@ -102,6 +101,7 @@ function confirmAddToCart() {
     updateCartCount();
     closePopup();
 }
+
 // CATEGORY FILTER
 function filterCategory(category) {
     if (category === "all") {
@@ -144,7 +144,7 @@ function applyFilters() {
     );
 
     // PRICE
-    result = result.filter(p => (p.price * 80) <= maxPrice);
+    result = result.filter(p => p.price <= maxPrice);
 
     // RATING
     if (ratingValue !== "all") {
@@ -160,9 +160,13 @@ function applyFilters() {
 
     displayProducts(result);
 }
+
+// GO TO CART PAGE
 function goToCart() {
     window.location.href = "cart.html";
 }
+
+// UPDATE CART COUNT
 function updateCartCount() {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     let total = cart.reduce((sum, item) => sum + item.qty, 0);
